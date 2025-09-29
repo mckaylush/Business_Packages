@@ -2,3 +2,4 @@ title: "Packages that Make Business Analytics a Walk in the Park"
 remote_theme: pages-themes/modernist@v0.2.0 # try: minimal, slate, modernist, tactile, leap-day, time-machine, etc.
 plugins:
   - jekyll-remote-theme
+description: ""

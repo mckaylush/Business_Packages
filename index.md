@@ -1,15 +1,18 @@
 <style>
-  /* Narrower content for readability */
+  /* page tweaks you already had … */
   main, .page-content, .wrapper { max-width: 860px; margin: 0 auto; }
+  a { color: #2563eb; }                 /* OK to keep simple link color */
 
-  /* Softer link + button color (adjust to your brand) */
-  a { color: #2563eb; }
-
-  /* Headline spacing */
-  h1 { margin-top: 18px; margin-bottom: 10px; }
-
-  /* Hide big auto title if your theme shows it */
-  .site-title, .project-name, header .site-title { display: none !important; }
+  /* === Scoped CTA styles (won't touch other links) === */
+  .footer-cta { text-align:center; margin: 32px 0; }
+  .footer-cta .cta-button{
+    display:inline-block; padding:10px 16px; border-radius:10px;
+    background:#2563eb; color:#fff !important; font-weight:600;
+    text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,.12);
+    transition:transform .08s ease, background .15s ease;
+  }
+  .footer-cta .cta-button:hover{ background:#1d4ed8; transform:translateY(-1px); }
+  .footer-cta .cta-button:active{ transform:translateY(0); }
 </style>
 
 ![Business analytics banner showing charts](assets/img/banner.jpg)
@@ -35,11 +38,11 @@ A business analyst's job isn’t just to crunch numbers—it’s to communicate 
 
 ## Core Packages You’ll Use All the Time
 
-#### 1. pandas
+### 1. pandas
 
 We've learned about this already in class and it's important because pandas is like a Swiss Army knife for data wrangling. It gives you fast, flexible ways to store, manipulate, and analyze large amount of data.
 
-##### Example: load a simple dataset
+#### Example: load a simple dataset
 
 ```python
 import pandas as pd
@@ -55,13 +58,13 @@ This produces descriptive statistics for your dataset (mean, standard deviation,
 
 ---
 
-#### 2. scikit-learn
+### 2. scikit-learn
 
 When you’re ready to move from exploration to modeling, scikit-learn has your back. We haven't learned as much about this in class yet, but I believe that it's extremely useful because it’s widely used for machine learning but also shines in data preprocessing.
 
 The place this package really shines is with its scaling features. These features allow for fair comparison between to values that are drastically and significantly different. It is important to have something that allows for us as the data analyst to view the actual relationship between our esssential values. For example,rRevenue values may be in the thousands, while customer counts are in the hundreds. Directly comparing them would skew your model. This is where **StandardScaler** and **MinMaxScaler** come in handy.
 
-##### Example data: revenue vs. customers
+#### Example data: revenue vs. customers
 
 ```python
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
@@ -92,7 +95,7 @@ With the power of scaling, we can clearly start to see some of the smaller detai
 
 ---
 
-#### 3. matplotlib and seaborn
+### 3. matplotlib and seaborn
 
 These two packages are usually used in tandem and are wizards when it come to visualizations. From the research that I've done, I've found that there are very few companies that don't commonly use these packages because of the extensive and useful tools they possess. This is especially important because a good picture speaks a thousand words.
 
@@ -150,11 +153,13 @@ Let's imagine that it's your first day on the job as a Data Analyst or something
 
 As shown throughout this blog post, business analytics doesn't have to be complicated. With the right packages, and a little bit of help from my blog, creating reports has never been so easy! Go ahead, take some of the code from my blog and experiment with it. These packages have near limitless possibilities, we just have to go out and find them. Good luck and have fun!
 
-<p align="center" style="margin:24px 0">
-  <a class="btn-primary" href="https://github.com/mckaylush/Business_Packages" target="_blank" rel="noopener">
+<div class="footer-cta">
+  <a class="cta-button"
+     href="https://github.com/USER/REPO"
+     target="_blank" rel="noopener">
     View the source on GitHub →
   </a>
-</p>
+</div>
 
 <style>
   .btn-primary{
