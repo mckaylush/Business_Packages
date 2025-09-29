@@ -1,3 +1,17 @@
+<style>
+  /* Narrower content for readability */
+  main, .page-content, .wrapper { max-width: 860px; margin: 0 auto; }
+
+  /* Softer link + button color (adjust to your brand) */
+  a { color: #2563eb; }
+
+  /* Headline spacing */
+  h1 { margin-top: 18px; margin-bottom: 10px; }
+
+  /* Hide big auto title if your theme shows it */
+  .site-title, .project-name, header .site-title { display: none !important; }
+</style>
+
 ![Business analytics banner showing charts](assets/img/banner.jpg)
 
 # Packages that Make Business Analytics an Easy Ride
@@ -78,7 +92,7 @@ With the power of scaling, we can clearly start to see some of the smaller detai
 
 ---
 
-### 3. matplotlib and seaborn
+#### 3. matplotlib and seaborn
 
 These two packages are usually used in tandem and are wizards when it come to visualizations. From the research that I've done, I've found that there are very few companies that don't commonly use these packages because of the extensive and useful tools they possess. This is especially important because a good picture speaks a thousand words.
 
@@ -120,7 +134,7 @@ Here's a table to help guide you:
 
 _Interactive Table leading to sources with more information_
 
-## Review and Next Steps
+## Review and Next Steps (Call to Action)
 
 Let's imagine that it's your first day on the job as a Data Analyst or something that needs to handle data. Your customer/boss have asked you to create a report so they can understand what they need to pay for/accomplish. Using what we've talked about here you will:
 
@@ -135,3 +149,20 @@ Let's imagine that it's your first day on the job as a Data Analyst or something
 1. **Build** a forecast for next quarter’s sales using pmdarima.
 
 As shown throughout this blog post, business analytics doesn't have to be complicated. With the right packages, and a little bit of help from my blog, creating reports has never been so easy! Go ahead, take some of the code from my blog and experiment with it. These packages have near limitless possibilities, we just have to go out and find them. Good luck and have fun!
+
+<p align="center" style="margin:24px 0">
+  <a class="btn-primary" href="https://github.com/mckaylush/Business_Packages" target="_blank" rel="noopener">
+    View the source on GitHub →
+  </a>
+</p>
+
+<style>
+  .btn-primary{
+    display:inline-block; padding:10px 16px; border-radius:10px;
+    background:#2563eb; color:#fff !important; font-weight:600;
+    text-decoration:none; box-shadow:0 4px 12px rgba(0,0,0,.12);
+    transition:transform .08s ease, background .15s ease;
+  }
+  .btn-primary:hover{ background:#1d4ed8; transform:translateY(-1px); }
+  .btn-primary:active{ transform:translateY(0); }
+</style>
