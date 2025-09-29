@@ -1,8 +1,10 @@
+![Business analytics banner showing charts and dashboards](assets/img/banner.png)
+
 # Packages that Make Business Analytics an Easy Ride
 
 ## Introduction
 
-Business analytics is all about **transforming raw data into actionable insights** that help companies make smarter decisions. If you’ve ever looked at sales numbers, customer churn, or revenue growth and thought, “How can I model this better?”—you’re in the right place.
+Business analytics is all about transforming raw data into actionable insights that help companies make smarter decisions. If you’ve ever looked at sales numbers, customer churn, or revenue growth and thought, “How can I model this better?”—you’re in the right place.
 
 In this post, we’ll walk through some of the most useful Python packages for business analytics. You’ll see industry staples like pandas and scikit-learn, along with a few specialized tools that often go under the radar. By the end, you’ll know not only what to use, but also when and why.
 
@@ -15,7 +17,7 @@ These packages are everywhere and the biggest reason is because these pckages sa
 - Building predictive models to forecast trends
 - Creating compelling visualizations for stakeholders
 
-A business analyst's job isn’t just to crunch numbers—it’s to **communicate insights clearly and efficiently**. The right package can be the difference between hours of frustration and a clean solution in minutes. In addition, it allows for smooth repeatability which is essential in large companies!
+A business analyst's job isn’t just to crunch numbers—it’s to communicate insights clearly and efficiently. The right package can be the difference between hours of frustration and a clean solution in minutes. In addition, it allows for smooth repeatability which is essential in large companies!
 
 ## Core Packages You’ll Use All the Time
 
@@ -35,7 +37,7 @@ data = pd.DataFrame({
 print(data.describe())
 ```
 
-This produces descriptive statistics for your dataset (mean, standard deviation, min, max) which is **essential for a first step in understanding business data**.
+This produces descriptive statistics for your dataset (mean, standard deviation, min, max) which is essential for a first step in understanding business data.
 
 ---
 
