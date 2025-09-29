@@ -19,6 +19,8 @@
 
 # Packages that Make Business Analytics an Easy Ride
 
+---
+
 ## Introduction
 
 Business analytics is all about transforming raw data into actionable insights that help companies make smarter decisions. If you’ve ever looked at sales numbers, customer churn, or revenue growth and thought, “How can I model this better?”—you’re in the right place.
