@@ -2,11 +2,9 @@
 
 ## Introduction
 
-Business analytics is all about **transforming raw data into actionable insights** that help companies make smarter decisions. If you’ve ever looked at sales numbers, customer churn, or revenue growth and thought, “How can I model this better?”—you’re in the right place.  
+Business analytics is all about **transforming raw data into actionable insights** that help companies make smarter decisions. If you’ve ever looked at sales numbers, customer churn, or revenue growth and thought, “How can I model this better?”—you’re in the right place.
 
-In this post, we’ll walk through some of the most useful Python packages for business analytics. You’ll see industry staples like pandas and scikit-learn, along with a few specialized tools that often go under the radar. By the end, you’ll know not only what to use, but also when and why.  
-
----
+In this post, we’ll walk through some of the most useful Python packages for business analytics. You’ll see industry staples like pandas and scikit-learn, along with a few specialized tools that often go under the radar. By the end, you’ll know not only what to use, but also when and why.
 
 ## Why Packages Matter in Business Analytics
 
@@ -15,18 +13,18 @@ These packages are everywhere and the biggest reason is because these pckages sa
 - Cleaning messy data
 - Scaling values like revenue and customer counts for fair comparison
 - Building predictive models to forecast trends
-- Creating compelling visualizations for stakeholders  
+- Creating compelling visualizations for stakeholders
 
 A business analyst's job isn’t just to crunch numbers—it’s to **communicate insights clearly and efficiently**. The right package can be the difference between hours of frustration and a clean solution in minutes. In addition, it allows for smooth repeatability which is essential in large companies!
 
----
-
 ## Core Packages You’ll Use All the Time
 
-### 1. pandas
+#### 1. pandas
+
 We've learned about this already in class and it's important because pandas is like a Swiss Army knife for data wrangling. It gives you fast, flexible ways to store, manipulate, and analyze large amount of data.
 
-#### Example: load a simple dataset
+##### Example: load a simple dataset
+
 ```python
 import pandas as pd
 
@@ -36,21 +34,24 @@ data = pd.DataFrame({
 })
 print(data.describe())
 ```
-This produces descriptive statistics for your dataset (mean, standard deviation, min, max) which is **essential for a first step in understanding business data**.  
+
+This produces descriptive statistics for your dataset (mean, standard deviation, min, max) which is **essential for a first step in understanding business data**.
 
 ---
 
-### 2. scikit-learn
+#### 2. scikit-learn
 
-When you’re ready to move from exploration to modeling, scikit-learn has your back. We haven't learned as much about this in class yet, but I believe that it's extremely useful because it’s widely used for machine learning but also shines in data preprocessing.  
+When you’re ready to move from exploration to modeling, scikit-learn has your back. We haven't learned as much about this in class yet, but I believe that it's extremely useful because it’s widely used for machine learning but also shines in data preprocessing.
 
 The place this package really shines is with its scaling features. These features allow for fair comparison between to values that are drastically and significantly different. It is important to have something that allows for us as the data analyst to view the actual relationship between our esssential values. For example,rRevenue values may be in the thousands, while customer counts are in the hundreds. Directly comparing them would skew your model. This is where **StandardScaler** and **MinMaxScaler** come in handy.
+
+##### Example data: revenue vs. customers
 
 ```python
 from sklearn.preprocessing import StandardScaler, MinMaxScaler
 import numpy as np
 
-# Example data: revenue vs. customers
+
 X = np.array([[1200, 40],
               [800, 25],
               [950, 30],
@@ -67,7 +68,9 @@ X_normalized = minmax.fit_transform(X)
 print("Standardized:\n", X_standardized)
 print("\nMinMax Scaled:\n", X_normalized)
 ```
+
 ![Scaling comparison: raw vs. standardized vs. min–max](assets/img/scaling_comparison.png)
+_Figure: Comparing the raw data (left) with StandardScaler (center) and MinMaxScaler (right)._
 
 With the power of scaling, we can clearly start to see some of the smaller details that would otherwise be missed without scaling. This allows us to make our data clear and fair as we start modeling.
 
@@ -75,7 +78,7 @@ With the power of scaling, we can clearly start to see some of the smaller detai
 
 ### 3. matplotlib and seaborn
 
-These two packages are usually used in tandem and are wizards when it come to visualizations. From the research that I've done, I've found that there are very few companies that don't commonly use these packages because of the extensive and useful tools they possess. This is especially important because a good picture speaks a thousand words. 
+These two packages are usually used in tandem and are wizards when it come to visualizations. From the research that I've done, I've found that there are very few companies that don't commonly use these packages because of the extensive and useful tools they possess. This is especially important because a good picture speaks a thousand words.
 
 ```python
 import seaborn as sns
@@ -85,14 +88,48 @@ sns.barplot(x="Customer", y="Revenue", data=data)
 plt.title("Revenue by Customer")
 plt.show()
 ```
-![Revenue by customer bar chart](assets/img/revenue_by_customer.png)
-*Figure: Bar chart of revenue by customer generated with seaborn.*
 
-Look how clean and simple this graph is! It is all thanks to matplotlib and seaborn. In addition, the types of graphs that you can create are vast, with plenty of options to suit whatever needs a large company might have. 
+![Revenue by customer bar chart](assets/img/revenue_by_customer.png)
+_Figure: Bar chart of revenue by customer generated with seaborn._
+
+Look how clean and simple this graph is! It is all thanks to matplotlib and seaborn. In addition, the types of graphs that you can create are vast, with plenty of options to suit whatever needs a large company might have.
+
+---
 
 ### Lesser Known but Powerful Packages
-* **statsmodels**: Perfect for regression and hypothesis testing. Want to see if marketing spend really predicts revenue growth? This is your tool.
 
-* **pyjanitor**: Adds simple functions on top of pandas for data cleaning. Tasks like removing empty rows or encoding categories become one-liners.
+- **statsmodels**: Perfect for regression and hypothesis testing. Want to see if marketing spend really predicts revenue growth? This is your tool.
 
-* **pmdarima**: Specialized for time series forecasting, especially helpful when projecting sales over months or quarters.
+- **pyjanitor**: Adds simple functions on top of pandas for data cleaning. Tasks like removing empty rows or encoding categories become one-liners. I used this during my internship over the summer and it was versatile and highly effective.
+
+- **pmdarima**: Specialized for time series forecasting, especially helpful when projecting sales over months or quarters.
+
+## Choosing the Right Package for the Job
+
+Here's a table to help guide you:
+| Task | Best option(s) | Why it works | Source |
+|---|---|---|---|
+| Cleaning messy data | [pandas](https://pandas.pydata.org/docs/), [pyjanitor](https://pandas.pydata.org/pandas-docs/version/1.5.1/ecosystem.html) | `pandas` is the tabular workhorse; `pyjanitor` adds convenient cleaning helpers on top of pandas. | [pandas docs (Ecosystem → Data cleaning & validation)](https://pandas.pydata.org/pandas-docs/version/1.5.1/ecosystem.html) |
+| Comparing values on different scales | [StandardScaler](https://scikit-learn.org/stable/modules/preprocessing.html), [MinMaxScaler](https://scikit-learn.org/stable/modules/preprocessing.html) (scikit-learn) | Standardization (mean 0, var 1) and Min-Max scaling \[0,1\] make features comparable and help many models train well. | [scikit-learn User Guide: Preprocessing](https://scikit-learn.org/stable/modules/preprocessing.html) |
+| Forecasting future trends | [statsmodels](https://www.statsmodels.org/stable/user-guide.html), [pmdarima (auto_arima)](https://alkaline-ml.com/pmdarima/modules/generated/pmdarima.arima.auto_arima.html) | Classical time-series (ARIMA, diagnostics) and automatic ARIMA order selection for quick baselines. | [statsmodels User Guide](https://www.statsmodels.org/stable/user-guide.html), [pmdarima docs (auto_arima)](https://alkaline-ml.com/pmdarima/modules/generated/pmdarima.arima.auto_arima.html) |
+| Visual storytelling | [matplotlib](https://matplotlib.org/stable/), [seaborn](https://seaborn.pydata.org/) | Matplotlib is the plotting foundation; Seaborn adds a high-level, statistical interface. | [Matplotlib docs](https://matplotlib.org/stable/), [Seaborn docs](https://seaborn.pydata.org/) |
+
+---
+
+_Interactive Table leading to sources with more information_
+
+## Review and Next Steps
+
+Let's imagine that it's your first day on the job as a Data Analyst or something that needs to handle data. Your customer/boss have asked you to create a report so they can understand what they need to pay for/accomplish. Using what we've talked about here you will:
+
+1. **Load** the data with pandas.
+
+1. **Clean** missing values with pyjanitor.
+
+1. **Scale** features like revenue vs. customers with scikit-learn.
+
+1. **Visualize** patterns with seaborn.
+
+1. **Build** a forecast for next quarter’s sales using pmdarima.
+
+As shown throughout this blog post, business analytics doesn't have to be complicated. With the right packages, and a little bit of help from my blog, creating reports has never been so easy! Go ahead, take some of the code from my blog and experiment with it. These packages have near limitless possibilities, we just have to go out and find them. Good luck and have fun!
