@@ -1,15 +1,4 @@
-<figure style="margin:0">
-  <img
-    src="assets/img/banner.jpg"
-    alt="Business analytics banner showing a laptop with charts and a bar plot dashboard"
-    style="width:100%; max-height:280px; object-fit:cover; border-radius:12px"
-    loading="eager"
-    title="Business analytics, from data to decisions"
-  />
-  <figcaption style="text-align:center; font-size:0.9em; color:#666; margin-top:6px">
-    Business analytics: turning raw data into decisions.
-  </figcaption>
-</figure>
+![Business analytics banner showing charts](assets/img/banner.jpg)
 
 # Packages that Make Business Analytics an Easy Ride
 
