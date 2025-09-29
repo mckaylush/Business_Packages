@@ -1,6 +1,6 @@
 <figure style="margin:0">
   <img
-    src="assets/img/banner.png"
+    src="assets/img/banner.jpg"
     alt="Business analytics banner showing a laptop with charts and a bar plot dashboard"
     style="width:100%; max-height:280px; object-fit:cover; border-radius:12px"
     loading="eager"
